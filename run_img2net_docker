@@ -1,0 +1,6 @@
+socat TCP-LISTEN:6000,reuseaddr,fork UNIX-CLIENT:\"$DISPLAY\" &
+
+docker run -ti --rm -e DISPLAY=136.167.204.180:0 -v /Users/weiqiu/DavidDocker/Img2net_Docker:/apps/DATA -v  /tmp/.X11-unix:/tmp/.X11-unix  img2net
+
+-- reference
+docker run -ti --rm -e DISPLAY=$DISPLAY -v /home/ruhld/DATA_img2net:/apps/DATA -v /tmp/.X11-unix:/tmp/.X11-unix img2net
